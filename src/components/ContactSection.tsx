@@ -11,7 +11,7 @@ const ContactSection = () => {
           <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="premium-card p-6">
@@ -78,40 +78,32 @@ const ContactSection = () => {
             </div>
 
             {/* Quick Actions */}
-            <div className="flex gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
               <a 
                 href="https://wa.me/919824312038" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-accent flex items-center gap-2"
+                className="btn-accent flex items-center justify-center gap-2"
               >
                 <MessageCircle size={20} />
                 WhatsApp
               </a>
               <a 
                 href="tel:+919824312038" 
-                className="btn-premium flex items-center gap-2"
+                className="btn-premium flex items-center justify-center gap-2"
               >
                 <Phone size={20} />
                 Call Now
               </a>
-            </div>
-          </div>
-
-          {/* Map */}
-          <div className="premium-card p-6">
-            <h3 className="font-heading font-bold text-primary uppercase mb-6">Find Us</h3>
-            <div className="aspect-video w-full bg-secondary/20 rounded-lg flex items-center justify-center">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234747.1614074842!2d70.5431076!3d22.2587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca248c77c099%3A0xdf4de2408c74a0b6!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1647859194352!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-lg"
-              ></iframe>
+              <a 
+                href="https://maps.google.com/?q=Rajkot,Gujarat,India" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn-premium flex items-center justify-center gap-2"
+              >
+                <MapPin size={20} />
+                Location
+              </a>
             </div>
           </div>
         </div>
