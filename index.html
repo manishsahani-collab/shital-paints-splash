@@ -96,18 +96,26 @@
         }
 
         /* Hero Section */
-        .hero {
+      .hero {
     min-height: 100vh;
-    background: url('images/hero_bg.png') no-repeat center center/cover; /* adjust path if needed */
+    /*background: linear-gradient(135deg, #1e3a8a, #f97316); */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;                  /* keep hero text readable */
+    color: white;
     position: relative;
     overflow: hidden;
 }
-/* remove the .hero::before block entirely */
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('hero_bg.png') no-repeat center center/cover;
+    opacity: 0.1;
+}
+
 
         .hero-content {
             position: relative;
